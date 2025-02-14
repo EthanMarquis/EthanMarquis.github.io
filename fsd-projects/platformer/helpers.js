@@ -500,8 +500,8 @@ function drawCollectables() {
         collectables[i].image,
         collectables[i].x,
         collectables[i].y,
-        collectableWidth,
-        collectableHeight
+        collectableWidth * 2,
+        collectableHeight * 2
       );
     } else {
       //draw the icons at the top if collected
@@ -513,8 +513,8 @@ function drawCollectables() {
         collectables[i].image,
         200 + 100 * i,
         10,
-        collectableWidth,
-        collectableHeight
+        collectableWidth * 2,
+        collectableHeight * 2
       );
       ctx.globalAlpha = 1;
     }
