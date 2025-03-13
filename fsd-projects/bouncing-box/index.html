@@ -53,6 +53,22 @@
 			// Every 50 milliseconds, call the update Function (see below)
 			var interval = setInterval(update, 50);
 			var misclicks = 0;
+			var gameOver = false;
+
+			
+			document.addEventListener("click", function(event) {
+				if (misclicks >= 10 && !gameOver){
+					endGame();
+					alert("You misclicked too many times. Refresh the page to restart")
+					gameOver = true;
+					
+				}
+				if (event.target.closest(".box")) {
+				} else {
+					misclicks += 1
+				}
+
+			});
 
 			function endGame() {
 				clearInterval(interval);
@@ -105,15 +121,12 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
+				if (gameOver = false) {
 				var randNum = Math.random();
 				positionX = boardWidth * randNum;
 				points += 1;
 				changeBoxText(points);
-				speed = 3 * points + 10;
-
-
-
-			};
+				speed = 3 * points + 10;}}
 
 
 
