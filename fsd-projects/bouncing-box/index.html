@@ -59,7 +59,7 @@
 			document.addEventListener("click", function(event) {
 				if (misclicks >= 10 && !gameOver){
 					endGame();
-					alert("You misclicked too many times. Refresh the page to restart")
+					alert("You misclicked too many times")
 					gameOver = true;
 					
 				}
@@ -121,12 +121,11 @@
 			the left side of the screen.
 			*/
 			function handleBoxClick() {
-				if (gameOver = false) {
 				var randNum = Math.random();
 				positionX = boardWidth * randNum;
 				points += 1;
 				changeBoxText(points);
-				speed = 3 * points + 10;}}
+				speed = 3 * points + 10;}
 
 
 
