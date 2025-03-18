@@ -59,9 +59,8 @@
 			document.addEventListener("click", function(event) {
 				if (misclicks >= 10 && !gameOver){
 					endGame();
-					alert("You misclicked too many times")
+					alert("You misclicked too many times. Refresh the page to retry.")
 					gameOver = true;
-					
 				}
 				if (event.target.closest(".box")) {
 				} else {
@@ -125,7 +124,9 @@
 				positionX = boardWidth * randNum;
 				points += 1;
 				changeBoxText(points);
-				speed = 3 * points + 10;}
+				speed = 3 * points + 10;
+				
+			}
 
 
 
