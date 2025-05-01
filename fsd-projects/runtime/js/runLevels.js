@@ -36,6 +36,16 @@ var runLevels = function (window) {
     createSawBlade(800, 425)
     createSawBlade(1200, 425)
 
+    var enemy = game.createGameItem("enemy", 25);
+    var redSquare = draw.rect(50, 50, "red");
+    redSquare.x = -25;
+    redSquare.y = -25;
+    enemy.addChild(redSquare)
+    enemy.x = 400
+    enemy.y = groundY - 50;
+
+    game.addGameItem(enemy);
+
     
 
     function startLevel() {
